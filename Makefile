@@ -4,6 +4,13 @@
 # SPDX-License-Identifier: BSD-2-Clause
 #
 
+ifeq ($(IN_NIX_SHELL),)
+	run_in_nix_shell := nix-shell -A shell --run
+else
+	run_in_nix_shell := $(SHELL) -c
+endif
+
+
 .PHONY: none
 none:
 
@@ -13,6 +20,8 @@ shell:
 
 .PHONY: build
 build:
-	mdbook build
-    # mdbook test
-    # linkchecker book
+	$(run_in_nix_shell) "mdbook build"
+
+.PHONY: check
+check:
+	$(run_in_nix_shell) "mdbook test && linkchecker book"

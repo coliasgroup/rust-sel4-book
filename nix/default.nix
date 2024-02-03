@@ -11,8 +11,8 @@ let
       rev = "269ce7215bb5b436546786e8d354d37903e102a8";
     in
       builtins.fetchTarball {
-        url = "https://github.com/nix/nixpkgs/archive/${rev}.tar.gz";
-        sha256 = "sha256:0ad2c7vlr9fidzjjg8szigfhmp1gvlf62ckd6cir8ymrxc93pby7";
+        url = "https://github.com/NixOS/nixpkgs/archive/${rev}.tar.gz";
+        sha256 = "sha256:0lccy0kf2287hmhr38ws9fy1gyxm4wvxrkvca471i57nvfbpjlg0";
       };
 
   pkgs = import nixpkgsPath {};
