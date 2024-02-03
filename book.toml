@@ -1,0 +1,14 @@
+#
+# Copyright 2024, Colias Group, LLC
+#
+# SPDX-License-Identifier: BSD-2-Clause
+#
+
+[book]
+authors = ["Nick Spinale <nick.spinale@coliasgroup.com>"]
+multilingual = false
+src = "src"
+title = "Using Rust in seL4 Userspace"
+
+[output.html]
+git-repository-url = "https://github.com/coliasgroup/rust-sel4-book"
