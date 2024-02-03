@@ -14,6 +14,10 @@ endif
 .PHONY: none
 none:
 
+.PHONY: clean
+clean:
+	rm -rf book
+
 .PHONY: shell
 shell:
 	nix-shell -A shell
@@ -25,3 +29,7 @@ build:
 .PHONY: check
 check:
 	$(run_in_nix_shell) "mdbook test && linkchecker book"
+
+.PHONY: open
+open:
+	open book/index.html
