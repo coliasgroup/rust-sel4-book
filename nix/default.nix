@@ -24,9 +24,9 @@ in {
 
   shell = with pkgs; mkShell {
     nativeBuildInputs = [
+      rustup
       mdbook
       linkchecker
-      rustup
     ];
   };
 }
